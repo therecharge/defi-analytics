@@ -1,10 +1,6 @@
 const ethers = require("ethers");
 const Web3Utils = require("web3-utils");
 const { toWei, fromWei, BN } = Web3Utils;
-let totalCirculation = {
-  ERC: new BN(toWei("1000000000", "ether")),
-  HRC: new BN(toWei("1000000000", "ether")),
-};
 const rechargeWallet = {
   ERC: ["0x3c2465d88C6546eac6F9aa6f79081Ad874CA2E8b"],
   HRC: [
@@ -36,6 +32,10 @@ const networks = ["ERC", "HRC"];
 const ERC20ABI = require("./abi/ERC20ABI.json");
 
 const getBalance = async () => {
+  let totalCirculation = {
+    ERC: new BN(toWei("1000000000", "ether")),
+    HRC: new BN(toWei("1000000000", "ether")),
+  };
   const res = await Promise.all(
     networks.map(async (network) => {
       const tokenI = new ethers.Contract(
