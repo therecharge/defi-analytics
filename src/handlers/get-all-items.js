@@ -29,7 +29,7 @@ const provider = {
 };
 const networks = ["ERC", "HRC"];
 
-const ERC20ABI = require("./abi/ERC20ABI.json");
+const ERC20ABI = require("../abis/ERC20_ABI.json");
 
 const getBalance = async () => {
   let totalCirculation = {
