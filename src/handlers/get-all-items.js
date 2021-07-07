@@ -13,6 +13,7 @@ const rechargeWallet = {
     "0xE6C873acCE44746E7Dc918e3ac957bbE78d717EA",
     "0x9fA218bB826a847999875e38E39a79B59C8E365b",
     "0x8Ec4422a07c3404204221A074c00Cbb1667fFd4E",
+    "0x3c2465d88C6546eac6F9aa6f79081Ad874CA2E8b",
   ],
 };
 const tokenAddress = {
