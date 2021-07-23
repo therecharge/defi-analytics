@@ -2,7 +2,11 @@ const ethers = require("ethers");
 const Web3Utils = require("web3-utils");
 const { toWei, fromWei, BN } = Web3Utils;
 const rechargeWallet = {
-  ERC: ["0x3c2465d88C6546eac6F9aa6f79081Ad874CA2E8b"],
+  ERC: [
+    "0x3c2465d88C6546eac6F9aa6f79081Ad874CA2E8b",
+    "0x582df98a2b9dbc103e130db971c476bdd3ff830c",
+    "0x5419eb32938e33b5e333f185e32bdad11d73a679",
+    ],
   HRC: [
     "0xb0bddd278C42F879A690bAfdc8301985C925b4f9",
     "0xFabede8fE44589A08FbF13C4425FaEE8CEaD63c0",
