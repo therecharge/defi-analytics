@@ -142,7 +142,7 @@ exports.getAllItemsHandler = async (event) => {
       ServicesPlugged: 1,
       ChargersActivated: 10,
       BridgesActivated: 1,
-      RedemptionRate: 200,
+      RedemptionRate: redemptions.HRC,
       ProposalsPosted: 1,
       ProposalsApproved: 10,
       ProposalsRejected: 1,
