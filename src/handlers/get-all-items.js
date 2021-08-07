@@ -29,10 +29,12 @@ const rechargeWallet = {
     "0xead8f1d4f431604941eca4b202bfc49b20db22aa",
     "0xfabede8fe44589a08fbf13c4425faee8cead63c0",
   ],
+  BEP: ["0xfabede8fe44589a08fbf13c4425faee8cead63c0"],
 };
 const tokenAddress = {
   ERC: "0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30",
   HRC: "0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b",
+  BEP: "0x2D94172436D869c1e3c094BeaD272508faB0d9E3",
 };
 const provider = {
   ERC: new ethers.providers.JsonRpcProvider(
@@ -41,8 +43,11 @@ const provider = {
   HRC: new ethers.providers.JsonRpcProvider(
     "https://http-mainnet.hecochain.com"
   ),
+  BEP: new ethers.providers.JsonRpcProvider(
+    "https://bsc-dataseed.binance.org/"
+  ),
 };
-const networks = ["ERC", "HRC"];
+const networks = ["ERC", "HRC", "BEP"];
 
 const ERC20ABI = require("../abis/ERC20_ABI.json");
 
@@ -50,6 +55,7 @@ const getBalance = async () => {
   let totalCirculation = {
     ERC: new BN(toWei("1000000000", "ether")),
     HRC: new BN(toWei("1000000000", "ether")),
+    BEP: new BN(toWei("1000000000", "ether")),
   };
   const res = await Promise.all(
     networks.map(async (network) => {
@@ -76,6 +82,7 @@ const getBalance = async () => {
   return {
     ERC: totalCirculation.ERC.toString(),
     HRC: totalCirculation.HRC.toString(),
+    BEP: totalCirculation.BEP.toString(),
   };
 };
 
@@ -83,6 +90,7 @@ const getRedemption = async () => {
   let Redemptions = {
     ERC: "0",
     HRC: "0",
+    BEP: "0",
   };
   const res = await Promise.all(
     networks.map(async (network) => {
@@ -107,6 +115,7 @@ const getRedemption = async () => {
   return {
     ERC: Redemptions.ERC.toString(),
     HRC: Redemptions.HRC.toString(),
+    BEP: Redemptions.BEP.toString(),
   };
 };
 
@@ -134,6 +143,13 @@ exports.getAllItemsHandler = async (event) => {
     HRC: {
       total: totalCirculation.HRC,
       redemption: redemptions.HRC,
+      price: "1",
+      swapped: "0",
+      conversion: "0",
+    },
+    BEP: {
+      total: totalCirculation.BEP,
+      redemption: redemptions.BEP,
       price: "1",
       swapped: "0",
       conversion: "0",

@@ -13,7 +13,7 @@ describe("Test getAllItemsHandler", () => {
     };
 
     // Invoke getAllItemsHandler
-    await lambda.getAllItemsHandler(event);
+    // await lambda.getAllItemsHandler(event);
 
     // Compare the result with the expected result
     // expect(result).toEqual(expectedResult);
