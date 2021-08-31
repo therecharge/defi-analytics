@@ -6,8 +6,10 @@ const rechargeWallet = {
     "0x3c2465d88C6546eac6F9aa6f79081Ad874CA2E8b",
     "0x582df98a2b9dbc103e130db971c476bdd3ff830c",
     "0x5419eb32938e33b5e333f185e32bdad11d73a679",
-  ],
-  HRC: [
+    "0x05A21AECa80634097e4acE7D4E589bdA0EE30b25",
+    "0x45c0b31Bc83D4C5E430b15D790596878dF31c30e",
+    "0xaBC71F46FA0D80bCC7D36D662Edbe9930271B414",
+    "0xbc2DDb693Ff20eed23aeB216Dc618e6D2a36ba75",
     "0x1a635f703ce22375709449e0fc58b5b3c0da63ed",
     "0x3c2465d88c6546eac6f9aa6f79081ad874ca2e8b",
     "0x4074aff9235040981160153f3539c0f8cddaa901",
@@ -29,7 +31,8 @@ const rechargeWallet = {
     "0xead8f1d4f431604941eca4b202bfc49b20db22aa",
     "0xfabede8fe44589a08fbf13c4425faee8cead63c0",
   ],
-  BEP: ["0xfabede8fe44589a08fbf13c4425faee8cead63c0"],
+  HRC: this.ERC,
+  BEP: this.ERC,
 };
 const tokenAddress = {
   ERC: "0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30",
@@ -53,9 +56,9 @@ const ERC20ABI = require("../abis/ERC20_ABI.json");
 
 const getBalance = async () => {
   let totalCirculation = {
-    ERC: new BN(toWei("1000000000", "ether")),
-    HRC: new BN(toWei("1000000000", "ether")),
-    BEP: new BN(toWei("1000000000", "ether")),
+    ERC: new BN(toWei("999020000", "ether")),
+    HRC: new BN(toWei("999020000", "ether")),
+    BEP: new BN(toWei("999020000", "ether")),
   };
   const res = await Promise.all(
     networks.map(async (network) => {
