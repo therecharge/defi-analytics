@@ -11,7 +11,6 @@ const WalletList = [
   "0xdbe87ac1700fe226276aa00d94049826d2944f1d",
   "0xc6ec1bb3afdd25150db8f6c3aaeb2d407b2abc17",
   "0xc0f7c09dd6acdcac9515bc1c018c14e93c1757ff",
-  "0xbc2DDb693Ff20eed23aeB216Dc618e6D2a36ba75",
   "0xb97597e955e60dd38afab6c8408151a7ebacfd5e",
   "0xb0bddd278c42f879a690bafdc8301985c925b4f9",
   "0xac66a0e8bf3de069ffc043491cb8ca7b278529a0",
