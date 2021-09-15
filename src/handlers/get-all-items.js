@@ -42,7 +42,7 @@ const tokenAddress = {
 };
 const provider = {
   ERC: new ethers.providers.JsonRpcProvider(
-    "https://eth-mainnet.alchemyapi.io/v2/2wgBGtGnTm3s0A0o23RY0BtXxgow1GAn"
+    "https://mainnet.infura.io/v3/7b9dc9ccc7224bea84eb901e556f89ce"
   ),
   HRC: new ethers.providers.JsonRpcProvider(
     "https://http-mainnet.hecochain.com"
@@ -57,9 +57,9 @@ const ERC20ABI = require("../abis/ERC20_ABI.json");
 
 const getBalance = async () => {
   let totalCirculation = {
-    ERC: new BN(toWei("999020000", "ether")),
-    HRC: new BN(toWei("999020000", "ether")),
-    BEP: new BN(toWei("999020000", "ether")),
+    ERC: new BN(toWei("998040000", "ether")),
+    HRC: new BN(toWei("998040000", "ether")),
+    BEP: new BN(toWei("998040000", "ether")),
   };
   const res = await Promise.all(
     networks.map(async (network) => {
