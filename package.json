@@ -1,17 +1,17 @@
 {
-    "name": "lambda-api-backend",
-    "description": "Website & Mobile starter project",
-    "version": "0.0.1",
-    "private": true,
-    "dependencies": {
-        "aws-sdk": "^2.660.0",
-        "ethers": "^5.4.1",
-        "web3-utils": "^1.4.0"
-    },
-    "devDependencies": {
-        "jest": "^25.4.0"
-    },
-    "scripts": {
-        "test": "jest"
-    }
+  "name": "defi-analytics",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.14"
+  }
 }
