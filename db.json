@@ -4,7 +4,7 @@
       "eth": "158494721076144867743414",
       "bsc": "34199200632219004299709",
       "heco": "0",
-      "lastUpdate": 1637957854941,
+      "lastUpdate": 1637959962031,
       "CycleUpdate": 300000
     },
     "numberOf": {
@@ -19,14 +19,14 @@
         "Redemption": "53430135590778638385852",
         "SwappedIn": "50093568907999988441118",
         "ConversionFee": "123000000000000000000",
-        "currentBlock": 13691835,
+        "currentBlock": 13691867,
         "offset": 2000
       },
       "bsc": {
-        "Redemption": 0,
-        "SwappedIn": "782000000000000000",
-        "ConversionFee": "2000000000000000000",
-        "currentBlock": 10412180,
+        "Redemption": "40425667647968088046260",
+        "SwappedIn": "2792581699999999349994",
+        "ConversionFee": "8000000000000000000",
+        "currentBlock": 11287180,
         "offset": 5000
       },
       "heco": {
