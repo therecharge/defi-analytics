@@ -1,0 +1,43 @@
+{
+  "Dashboard": {
+    "totalCirculation": {
+      "eth": "158494721076144867743414",
+      "bsc": "34199200632219004299709",
+      "heco": "0",
+      "lastUpdate": 1637957036709,
+      "CycleUpdate": 300000
+    },
+    "numberOf": {
+      "Plugged": 1,
+      "Charger": 1,
+      "Bridges": 2,
+      "lastUpdate": 1637952092476,
+      "CycleUpdate": 86400000
+    },
+    "Accumulated": {
+      "eth": {
+        "Redemption": "53430135590778638385852",
+        "SwappedIn": "50093568907999988441118",
+        "ConversionFee": "123000000000000000000",
+        "currentBlock": 13691780,
+        "offset": 2000
+      },
+      "bsc": {
+        "Redemption": 0,
+        "SwappedIn": "782000000000000000",
+        "ConversionFee": "2000000000000000000",
+        "currentBlock": 10342180,
+        "offset": 2000
+      },
+      "heco": {
+        "Redemption": 0,
+        "SwappedIn": 0,
+        "ConversionFee": 0,
+        "currentBlock": 0,
+        "offset": 3000
+      },
+      "lastUpdate": 0,
+      "CycleUpdate": 86400000
+    }
+  }
+}
