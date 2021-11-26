@@ -1,12 +1,15 @@
-const path = require('path')
+const path = require("path");
 const contract = require("@truffle/contract");
 const Web3 = require("web3");
 require("dotenv").config();
 
 const Artifacts = {
-  ERC20: require(path.join(__dirname, '../lib/contracts/ERC20.json')),
-  ChargerList: require(path.join(__dirname, '../lib/contracts/ChargerList.json'))
-}
+  ERC20: require(path.join(__dirname, "../lib/contracts/ERC20.json")),
+  ChargerList: require(path.join(
+    __dirname,
+    "../lib/contracts/ChargerList.json"
+  )),
+};
 
 const Providers = {
   eth: new Web3.providers.HttpProvider(process.env.RPC_ETH),
@@ -16,23 +19,24 @@ const Providers = {
 
 const GetContracts = async () => {
   return {
-    ERC20:{
-    eth: await _GetContract(Artifacts.ERC20, Providers.eth),
-    bsc: await _GetContract(Artifacts.ERC20, Providers.bsc),
-    heco: await _GetContract(Artifacts.ERC20, Providers.heco)
+    ERC20: {
+      eth: await _GetContract(Artifacts.ERC20, Providers.eth),
+      bsc: await _GetContract(Artifacts.ERC20, Providers.bsc),
+      heco: await _GetContract(Artifacts.ERC20, Providers.heco),
     },
-    ChargerList:{
-    eth: await _GetContract(Artifacts.ChargerList, Providers.eth),
-    bsc: await _GetContract(Artifacts.ChargerList, Providers.bsc),
-    // heco: await _GetContract(Artifacts.ChargerList, Providers.heco)
-    }
-  }
-}
+    ChargerList: {
+      eth: await _GetContract(Artifacts.ChargerList, Providers.eth),
+      bsc: await _GetContract(Artifacts.ChargerList, Providers.bsc),
+      // heco: await _GetContract(Artifacts.ChargerList, Providers.heco)
+    },
+    Providers: Providers,
+  };
+};
 
 const _GetContract = async (artifact, provider) => {
   var Contract = contract(artifact);
-  Contract.setProvider(provider)
+  Contract.setProvider(provider);
   return await Contract.deployed();
-}
+};
 
 module.exports = GetContracts;
